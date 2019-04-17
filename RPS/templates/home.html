@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <style>
+        div.a {
+            font-size: 200%;
+            width:200px;
+            margin: auto;
+            border: 3px solid #73AD21;
+            text-align: center;
+        }
+    </style>
+</head>
+<body bgcolor="orange">
+<p align="center"style="color:blue;font-size:50px">Rock Paper Scissors</p>
+
+<p align="center"style="color:blue;font-size:50px">Click on a choice to play!</p>
+
+<div class="a">
+<p id="demo" onclick="Rock()">Rock</p>
+
+<p id="demo" onclick="Paper()">Paper</p>
+
+<p id="demo" onclick="Scissors()">Scissors</p>
+    </div>
+
+<script>
+    function Rock() {
+        if (Math.floor(Math.random() * 3) == 0) {
+            alert("Rock vs Rock   DRAW!!!")
+        } else if (Math.floor(Math.random() * 3) == 1) {
+            alert("Rock vs Paper  YOU LOSE!!!")
+        } else {
+            alert("Rock vs Scissors  YOU WIN!!!")
+        }
+    }
+
+    function Paper() {
+        if (Math.floor(Math.random() * 3) == 0) {
+            alert("Paper vs Paper   DRAW!!!")
+        } else if (Math.floor(Math.random() * 3) == 1) {
+            alert("Paper vs Rock  YOU WIN!!!")
+        } else {
+            alert("Paper vs Scissors  YOU LOSE!!!")
+        }
+    }
+
+    function Scissors() {
+        if (Math.floor(Math.random() * 3) == 0) {
+            alert("Scissors vs Scissors   DRAW!!!")
+        } else if (Math.floor(Math.random() * 3) == 1) {
+            alert("Scissors vs Paper  YOU WIN!!!")
+        } else {
+            alert("Scissors vs Rock  YOU LOSE!!!")
+        }
+    }
+
+</script>
+</body>
+</html>
