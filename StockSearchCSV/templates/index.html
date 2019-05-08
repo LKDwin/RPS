@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company List</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'pic.css') }}">
+	   <style>
+body {
+  background-color: powderblue;
+}
+</style>
+        <script>
+function goBack() {
+  window.history.back()
+}
+</script>
+</head>
+<body>
+<style type=text/css>
+.center {
+  position: absolute;
+  width: 300px;
+  height: 450px;
+  z-index: 15;
+  top: 30%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  opacity: 0.5;
+}
+
+</style>
+
+<div class="center">
+    <h1>Search Company List</h1>
+<form method="POST">
+    <input name="symbol" placeholder="ex. AAPL (Apple Inc.)">
+    <input type="submit">
+    <h3>Search a list of companies on a CSV file by entering the stock sign of a company.</h3>
+</form>
+</div>
+
+</body>
+</html>

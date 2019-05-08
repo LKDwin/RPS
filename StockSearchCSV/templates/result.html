@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'pic.css') }}">
+	   <style>
+body {
+  background-color: powderblue;
+}
+</style>
+        <script>
+function goBack() {
+  window.history.back()
+}
+</script>
+</head>
+<body>
+<style>
+.center {
+  position: absolute;
+  width: 300px;
+  height: 450px;
+  z-index: 15;
+  top: 30%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  opacity: 0.5;
+}
+</style>
+
+<div class="center">
+<ul>  <li><p>Name: {% for item in name %}
+        {{ item  }}
+{% endfor %}</p></li>
+
+<li><p>Last Sale: {% for item in sale %}
+        {{ item }}
+{% endfor %}</p></li>
+<li><p>Market Cap: {% for item in market %}
+        {{ item }}
+{% endfor %}</p></li>
+
+<li><p>IPO Year: {% for item in year %}
+        {{ item }}
+{% endfor %}</p></li>
+<li><p>Sector: {% for item in sector %}
+        {{ item }}
+{% endfor %}</p></li>
+
+<li><p>Industry: {% for item in industry %}
+        {{ item }}
+{% endfor %}</p></li>
+<button onclick="goBack()" >Clear</button>
+</ul>
+</div>
+</body>
+</html>
